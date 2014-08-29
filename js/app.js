@@ -1,11 +1,26 @@
 angular.module('website', ['ngAnimate', 'ngTouch'])
     .controller('MainCtrl', function ($scope) {
         $scope.slides = [
-            {image: 'images/img00.jpg', description: 'Image 00'},
-            {image: 'images/img01.jpg', description: 'Image 01'},
-            {image: 'images/img02.jpg', description: 'Image 02'},
-            {image: 'images/img03.jpg', description: 'Image 03'},
-            {image: 'images/img04.jpg', description: 'Image 04'}
+            {image: 'images/taco2.png', 
+            description: 'A tastey greek pizza with lots of sauce, red peppers, olives, basil, feta cheese, sun dried tomatoes.',
+            title: "Greek Pizza"
+        },
+            {image: 'images/img01.jpg',
+            description: 'Nulla elementum orci libero, id varius eros imperdiet quis. Ut quis ante eros. In posuere felis et eros tempor lobortis. Fusce lacinia fringilla dui, ut sollicitudin elit iaculis eu. Suspendisse mattis diam dolor, in condimentum ex imperdiet vitae. Phasellus ut odio vitae odio rhoncus eleifend. ',
+            title: "Cheese"
+        },
+            {image: 'images/img02.jpg', 
+            description: 'Morbi nulla nisi, aliquet sed tristique eu, imperdiet at erat. Sed feugiat nec velit a semper. Quisque sed pharetra tortor.',
+            title: "BBQ Pizza"
+        },
+            {image: 'images/img03.jpg', 
+            description: ' lobortis orci ac, varius magna. Duis posuere elit non turpis dignissim pharetra. Vivamus eget turpis ac ipsum ultrices pretium.',
+            title: "Turkey"
+        },
+            {image: 'images/img04.jpg', 
+            description: 'In eu dui venenatis, semper turpis sit amet, porttitor turpis. Vivamus eu ornare turpis.',
+            title: "Alfredo"
+        }
         ];
 
         $scope.direction = 'left';

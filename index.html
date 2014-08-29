@@ -4,9 +4,23 @@
     <meta charset="utf-8">
     <title>AngularJS Animate Slider</title>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width">
+            <link rel="stylesheet" type="text/css" href="normalize.css">
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <!-- <link rel="stylesheet" type="text/css"href="bootstrap.css"> -->
+            <link href='http://fonts.googleapis.com/css?family=Lobster|Oswald' rel='stylesheet' type='text/css'>
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+
+            <link href="css/bootstrap" rel="stylesheet">
+            <link rel="stylesheet" href="css/styles.css">
 </head>
+    <header>
+        <img class="backarrow"src="images/arrow.png" alt="back arrow">
+        <h2 class="navtitle">ChefSource</h2>
+        <img class="searchbtn"src="images/search.png" alt="search button">
+    </header>
+
+                  
 
 <body ng-controller="MainCtrl">
 
@@ -17,7 +31,7 @@
 
     <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
     <a class="arrow next" href="#" ng-click="prevSlide()"></a>
-    <nav class="nav">
+    <!-- <nav class="nav">
         <div class="wrapper">
             <ul class="dots">
                 <li class="dot" ng-repeat="slide in slides">
@@ -25,10 +39,20 @@
                        ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<footer>
+                    <div ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+                    ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+                    ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+                    <h3>{{slide.title}}</h3>
+                    <p>{{slide.description}}</p>
+                    </div>
+                
+                </footer> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
